@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS132 Towers of Hanoi II", "CS132 Towers of Hanoi II\CS132 Towers of Hanoi II.vcxproj", "{DB1FEE67-019E-4908-8B40-F7A3D83CF809}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Debug|x64.ActiveCfg = Debug|x64
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Debug|x64.Build.0 = Debug|x64
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Debug|x86.ActiveCfg = Debug|Win32
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Debug|x86.Build.0 = Debug|Win32
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Release|x64.ActiveCfg = Release|x64
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Release|x64.Build.0 = Release|x64
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Release|x86.ActiveCfg = Release|Win32
+		{DB1FEE67-019E-4908-8B40-F7A3D83CF809}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC2784C0-CAC4-4D8D-9324-5FC5F8B3782A}
+	EndGlobalSection
+EndGlobal
