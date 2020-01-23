@@ -8,6 +8,8 @@ class Stack {
 private:
 	Node* top;
 	int amountOfNodes;
+
+	void displayStackReverseHelper(Node* current) const;
 public:
 	//Default constructor
 	Stack();
@@ -21,6 +23,10 @@ public:
 	//Push and pop functions
 	void push(int valueToPush);
 	int pop();
+
+	//Displaying the stack
+	void displayStack() const;
+	void displayStackInReverse() const;
 
 	//Default Destructor
 	~Stack();

@@ -148,14 +148,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CS132 Towers of Hanoi III.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="Peg.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Source1.cpp" />
+    <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
-    <ClInclude Include="Header1.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="Peg.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

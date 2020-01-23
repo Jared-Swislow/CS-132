@@ -21,10 +21,10 @@
     <ClCompile Include="Peg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source1.cpp">
+    <ClCompile Include="Node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +32,10 @@
     <ClInclude Include="Peg.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="Stack.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header1.h">
+    <ClInclude Include="Node.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,7 +1,6 @@
 //#include "stdafx.h"
 #include "Peg.h"
 #include <iostream>
-#include <vector>
 #include <string>
 #include <cassert>
 
@@ -15,20 +14,19 @@ Peg::Peg(string pegName, int numDisks) {
 void Peg::loadDisks(int numDisks) {
 	assert(numDisks >= 0);
 	for (int i = numDisks; i > 0; i--) {
-		stack.push_back(i);
+		stack.push(i);
 	}
 }
 
 void Peg::printPeg() const {
 	cout << name << ": ";
-	for (int i = 0; i < static_cast<int>(stack.size()); i++) {
-		cout << stack[i];
-	}
+	//stack.displayStack();
+	stack.displayStackInReverse();
 	cout << endl;
 }
 
 unsigned int Peg::getNumDisks() const {
-	return stack.size();
+	return stack.getAmountOfNodes();
 }
 
 string Peg::getName() const {
@@ -36,18 +34,18 @@ string Peg::getName() const {
 }
 
 void Peg::addDisk(int diskValue) {
-	stack.push_back(diskValue);
+	stack.push(diskValue);
 }
 
 int Peg::topDisk() const {
 	assert(getNumDisks() > 0);
-	return stack.back();
+	return stack.getTop()->getValue();
 }
 
 int Peg::removeTop() {
 	assert(getNumDisks() > 0);
-	int temp = stack.back();
-	stack.pop_back();
+	int temp = stack.getTop()->getValue();
+	stack.pop();
 	return temp;
 }
 

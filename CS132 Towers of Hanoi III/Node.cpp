@@ -8,16 +8,20 @@ Node::Node(int newValue) {
 }
 
 //Accessors for next and value
-Node* getNextNodePtr() const {
-	return next;
+Node* Node::getNextNodePtr() const {
+	Node* returnPtr = nullptr;
+	if (next != nullptr) {
+		returnPtr = next;
+	}
+	return returnPtr;
 }
 
-int getValue() const {
+int Node::getValue() const {
 	return value;
 }
 
 //Mutators for next and value
-void setNextNodePtr(Node* ptrToSet) {
+void Node::setNextNodePtr(Node* ptrToSet) {
 	next = ptrToSet;
 }
 

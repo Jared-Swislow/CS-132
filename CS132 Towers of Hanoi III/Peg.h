@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <vector>
+#include "Stack.h"
 
 using namespace std;
 
@@ -12,7 +12,7 @@ private:
 	string name;
 
 	//Structure to hold the disks
-	vector<int> stack;
+	Stack stack;
 
 	//Private method to load numDisks disks onto a Peg
 	void loadDisks(int numDisks);
