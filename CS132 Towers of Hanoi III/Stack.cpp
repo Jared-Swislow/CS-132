@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Stack.h"
 #include "Node.h"
 #include <cassert>

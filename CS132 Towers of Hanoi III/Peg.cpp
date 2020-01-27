@@ -1,4 +1,4 @@
-//#include "stdafx.h"
+#include "stdafx.h"
 #include "Peg.h"
 #include <iostream>
 #include <string>

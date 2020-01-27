@@ -1,7 +1,7 @@
 //Jared Swislow
 //CS 132 Program 3: Towers of Hanoi with Stack and Node classes
 
-//#include "stdafx.h"
+#include "stdafx.h"
 #include <iostream>
 #include <cassert>
 #include "Peg.h"
