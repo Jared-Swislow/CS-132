@@ -38,6 +38,9 @@ public:
 	void addDisk(int diskValue);
 	int removeTop();
 
+	//Operator overloaders
+	friend ostream& operator << (ostream& outStream, const Peg& thisPeg);
+
 	//Destructor
 	~Peg();
 };

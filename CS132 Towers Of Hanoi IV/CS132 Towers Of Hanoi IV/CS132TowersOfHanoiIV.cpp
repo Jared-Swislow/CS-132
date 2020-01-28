@@ -1,5 +1,5 @@
 //Jared Swislow
-//CS 132 Program 4: Towers of Hanoi with AAAAAAAAAAAAAAAAAAAAAAAAAA
+//CS 132 Program 4: Towers of Hanoi with  operator overloading for <<
 
 #include "stdafx.h" //Dependancy for home computer
 #include <iostream>
@@ -22,22 +22,28 @@ int main()
 
 	int amountOfMoves = 0;
 
-	cout << "Jared Swislow's Program 4: Towers Of Hanoi with AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << endl << endl;
+	cout << "Jared Swislow's Program 4: Towers Of Hanoi with operator overloading for <<" << endl << endl;
 
-	peg1.printPeg();
-	peg2.printPeg();
-	peg3.printPeg();
+	cout << peg1 << peg2 << peg3;
 
 	cout << endl << "Moves taken to move " << NUM_OF_DISKS << " pegs from peg1 to peg3:" << endl;
 	hanoi(peg1, peg3, peg2, NUM_OF_DISKS, amountOfMoves);
 
 	cout << endl;
 
-	peg1.printPeg();
+	cout << peg1 << peg2 << peg3;
+	/*peg1.printPeg();
 	peg2.printPeg();
-	peg3.printPeg();
+	peg3.printPeg();*/
 	cout << "Moving " << NUM_OF_DISKS << " pegs took " << amountOfMoves << " moves." << endl;
-	system("pause");
+
+	//Cliff's test code
+	{
+		const Node cliffNode(123, (Node*)0x45678);
+		Stack cliffStack; cliffStack.push(123); cliffStack.push(-456); cliffStack.push(789); const Stack cliffStack2;
+		const Peg cliffPeg("Cliff Peg", 3);
+		cout << cliffNode << cliffStack << cliffStack2 << cliffPeg << endl;
+	}
 	return 0;
 }
 
@@ -51,6 +57,7 @@ void moveDisk(Peg& peg1, Peg& peg2, int& amountOfMoves) {
 	}
 
 	peg2.addDisk(peg1.topDisk());
+	cout << peg2;
 	peg1.removeTop();
 	cout << "Moved disk " << peg2.topDisk() << " from " << peg1.getName() << " to " << peg2.getName() << endl;
 	amountOfMoves++;

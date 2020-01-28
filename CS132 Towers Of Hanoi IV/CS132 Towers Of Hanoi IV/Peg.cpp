@@ -18,16 +18,21 @@ void Peg::loadDisks(int numDisks) {
 	}
 }
 
-void Peg::printPeg() const {
-	cout << name << ": ";
-	stack.displayStack();
-	cout << endl;
-}
+//void Peg::printPeg() const {
+//	cout << name << ": ";
+//	stack.displayStack();
+//	cout << endl;
+//}
 
-void Peg::printPegReverse() const {
-	cout << name << ": ";
-	stack.displayStackInReverse();
-	cout << endl;
+//void Peg::printPegReverse() const {
+//	cout << name << ": ";
+//	stack.displayStackInReverse();
+//	cout << endl;
+//}
+
+ostream& operator << (ostream& outStream, const Peg& thisPeg) {
+	outStream << thisPeg.getName() << ": " << thisPeg.stack << endl;
+	return outStream;
 }
 
 unsigned int Peg::getNumDisks() const {
@@ -44,12 +49,12 @@ void Peg::addDisk(int diskValue) {
 
 int Peg::topDisk() const {
 	assert(getNumDisks() > 0);
-	return stack.getTop()->getValue();
+	return stack.getTop();
 }
 
 int Peg::removeTop() {
 	assert(getNumDisks() > 0);
-	int temp = stack.getTop()->getValue();
+	int temp = stack.getTop();
 	stack.pop();
 	return temp;
 }

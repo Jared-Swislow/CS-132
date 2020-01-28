@@ -12,9 +12,9 @@ Stack::Stack() {
 }
 
 //Accessors for top and amountOfNodes
-Node* Stack::getTop() const {
+int Stack::getTop() const {
 	assert(amountOfNodes > 0);
-	return top;
+	return top->getValue();
 }
 
 int Stack::getAmountOfNodes() const {
@@ -24,19 +24,19 @@ int Stack::getAmountOfNodes() const {
 //Push and pop functions
 //Clean this up to not have ifs?
 void Stack::push(int valueToPush) {
-	if (amountOfNodes == 0) {
+	/*if (amountOfNodes == 0) {
 		top = new Node(valueToPush);
 	}
-	else {
+	else {*/
 		Node* temp = top;
 		top = new Node(valueToPush);
 		top->setNextNodePtr(temp);
-	}
+	//}
 	amountOfNodes++;
 }
 int Stack::pop() {
 	assert(amountOfNodes > 0);
-	int tempValue = top->getValue();
+	int tempValue = getTop();
 	Node* temp = top;
 	top = top->getNextNodePtr();
 	delete temp;
@@ -45,25 +45,33 @@ int Stack::pop() {
 }
 
 //Displaying the stack
-void Stack::displayStack() const {
-	Node* crawler = top;
-	while(crawler != nullptr) {
-		cout << crawler->getValue();
-		crawler = crawler->getNextNodePtr();
-	}
-}
+//void Stack::displayStack() const {
+//	Node* crawler = top;
+//	while(crawler != nullptr) {
+//		cout << crawler->getValue();
+//		crawler = crawler->getNextNodePtr();
+//	}
+//}
 
-void Stack::displayStackInReverse() const {
-	if (amountOfNodes > 0) {
-		displayStackReverseHelper(getTop());
-	}
-}
+//void Stack::displayStackInReverse() const {
+//	if (amountOfNodes > 0) {
+//		displayStackReverseHelper(top);
+//	}
+//}
 
 void Stack::displayStackReverseHelper(Node* current) const {
 	if (current != nullptr) {
 		displayStackReverseHelper(current->getNextNodePtr());
-		cout << current->getValue();
+		cout << current;
 	}
+}
+
+ostream& operator << (ostream& outStream, Stack thisStack) {
+	if (thisStack.amountOfNodes > 0) {
+		thisStack.displayStackReverseHelper(thisStack.top);
+	}
+	//outStream << thisStack.top;
+	return outStream;
 }
 
 //Destructor

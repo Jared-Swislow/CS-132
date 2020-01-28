@@ -15,7 +15,7 @@ public:
 	Stack();
 	
 	//Accessors for top and amountOfNodes
-	Node* getTop() const;
+	int getTop() const;
 	int getAmountOfNodes() const;
 
 	//Mutators?
@@ -25,8 +25,11 @@ public:
 	int pop();
 
 	//Displaying the stack
-	void displayStack() const;
-	void displayStackInReverse() const;
+	//void displayStack() const;
+	//void displayStackInReverse() const;
+
+	//Operator overloading
+	friend ostream& operator << (ostream& outStream, Stack thisStack);
 
 	//Default Destructor
 	~Stack();

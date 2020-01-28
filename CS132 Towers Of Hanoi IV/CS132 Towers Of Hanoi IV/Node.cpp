@@ -1,5 +1,7 @@
 #include "stdafx.h" //Dependancy for home computer
 #include "Node.h"
+#include <iostream>
+#include <cassert>
 
 using namespace std;
 
@@ -8,16 +10,18 @@ Node::Node(int newValue) {
 	next = nullptr;
 }
 
+Node::Node(int newValue, Node* nextNodePtr) {
+	value = newValue;
+	next = nextNodePtr;
+}
+
 //Accessors for next and value
 Node* Node::getNextNodePtr() const {
-	Node* returnPtr = nullptr;
-	if (next != nullptr) {
-		returnPtr = next;
-	}
-	return returnPtr;
+	return next;
 }
 
 int Node::getValue() const {
+	assert(this != nullptr);
 	return value;
 }
 
@@ -28,6 +32,12 @@ void Node::setNextNodePtr(Node* ptrToSet) {
 
 void Node::setValue(int newValue) {
 	value = newValue;
+}
+
+
+ostream& operator << (ostream& outStream, Node thisNode) {
+	outStream << thisNode.value;
+	return outStream;
 }
 
 Node::~Node() {
