@@ -29,7 +29,7 @@ public:
 	//void displayStackInReverse() const;
 
 	//Operator overloading
-	friend ostream& operator << (ostream& outStream, Stack thisStack);
+	friend ostream& operator << (ostream& outStream, const Stack thisStack);
 
 	//Default Destructor
 	~Stack();

@@ -22,7 +22,7 @@ public:
 	void setValue(int newValue);
 
 	//Operator overloading
-	friend ostream& operator << (ostream& outStream, Node thisNode);
+	friend ostream& operator << (ostream& outStream, const Node thisNode);
 
 	//Default Destructor
 	~Node();

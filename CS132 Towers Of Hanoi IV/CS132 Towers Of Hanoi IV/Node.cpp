@@ -35,7 +35,7 @@ void Node::setValue(int newValue) {
 }
 
 
-ostream& operator << (ostream& outStream, Node thisNode) {
+ostream& operator << (ostream& outStream, const Node thisNode) {
 	outStream << thisNode.value;
 	return outStream;
 }

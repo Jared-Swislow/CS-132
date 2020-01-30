@@ -54,9 +54,9 @@ int Peg::topDisk() const {
 
 int Peg::removeTop() {
 	assert(getNumDisks() > 0);
-	int temp = stack.getTop();
+	int tempData = stack.getTop();
 	stack.pop();
-	return temp;
+	return tempData;
 }
 
 Peg::~Peg() {

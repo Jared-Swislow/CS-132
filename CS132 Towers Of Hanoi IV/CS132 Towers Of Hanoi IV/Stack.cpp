@@ -22,16 +22,10 @@ int Stack::getAmountOfNodes() const {
 }
 
 //Push and pop functions
-//Clean this up to not have ifs?
 void Stack::push(int valueToPush) {
-	/*if (amountOfNodes == 0) {
-		top = new Node(valueToPush);
-	}
-	else {*/
-		Node* temp = top;
-		top = new Node(valueToPush);
-		top->setNextNodePtr(temp);
-	//}
+	Node* temp = top;
+	top = new Node(valueToPush);
+	top->setNextNodePtr(temp);
 	amountOfNodes++;
 }
 int Stack::pop() {
@@ -66,7 +60,7 @@ void Stack::displayStackReverseHelper(Node* current) const {
 	}
 }
 
-ostream& operator << (ostream& outStream, Stack thisStack) {
+ostream& operator << (ostream& outStream, const Stack thisStack) {
 	if (thisStack.amountOfNodes > 0) {
 		thisStack.displayStackReverseHelper(thisStack.top);
 	}
