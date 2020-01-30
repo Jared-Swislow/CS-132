@@ -27,14 +27,13 @@ int main()
 	cout << peg1 << peg2 << peg3;
 
 	cout << endl << "Moves taken to move " << NUM_OF_DISKS << " pegs from peg1 to peg3:" << endl;
+
 	hanoi(peg1, peg3, peg2, NUM_OF_DISKS, amountOfMoves);
 
 	cout << endl;
 
 	cout << peg1 << peg2 << peg3;
-	/*peg1.printPeg();
-	peg2.printPeg();
-	peg3.printPeg();*/
+
 	cout << "Moving " << NUM_OF_DISKS << " pegs took " << amountOfMoves << " moves." << endl;
 
 	//Cliff's test code

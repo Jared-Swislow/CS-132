@@ -25,8 +25,8 @@ public:
 	unsigned int getNumDisks() const;
 
 	//Methods to display what disks are on the peg
-	void printPeg() const;
-	void Peg::printPegReverse() const;
+	//void printPeg() const;
+	//void Peg::printPegReverse() const;
 
 	//Accessor for the peg name
 	string getName() const;

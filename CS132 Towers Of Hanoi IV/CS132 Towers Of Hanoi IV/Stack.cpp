@@ -62,7 +62,7 @@ int Stack::pop() {
 void Stack::displayStackReverseHelper(Node* current) const {
 	if (current != nullptr) {
 		displayStackReverseHelper(current->getNextNodePtr());
-		cout << current;
+		cout << current->getValue();
 	}
 }
 
@@ -70,7 +70,6 @@ ostream& operator << (ostream& outStream, Stack thisStack) {
 	if (thisStack.amountOfNodes > 0) {
 		thisStack.displayStackReverseHelper(thisStack.top);
 	}
-	//outStream << thisStack.top;
 	return outStream;
 }
 
