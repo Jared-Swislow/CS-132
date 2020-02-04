@@ -2,6 +2,7 @@
 //CS 132 Program 5: Towers of Hanoi with stack exception handling, copy constructors, and assignment and equality overloading
 
 #include <iostream>
+#define NDEBUG
 #include <cassert>
 #include <string> //Included so I can directly cout strings on my home computer. Removable in newer versions of VS
 #include "Peg.h"
