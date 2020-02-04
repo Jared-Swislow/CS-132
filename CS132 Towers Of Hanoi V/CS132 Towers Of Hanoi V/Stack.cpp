@@ -1,4 +1,3 @@
-//#include "stdafx.h" //Dependancy for home computer
 #include "Stack.h"
 #include "Node.h"
 #include <cassert>

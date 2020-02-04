@@ -8,7 +8,7 @@ using namespace std;
 class Stack {
 private:
 	Node* top;
-	int amountOfNodes;
+	unsigned int amountOfNodes;
 
 	void displayStackReverseHelper(Node* current, ostream& outStream) const;
 public:

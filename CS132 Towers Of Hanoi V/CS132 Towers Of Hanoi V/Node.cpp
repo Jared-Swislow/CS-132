@@ -1,4 +1,3 @@
-//#include "stdafx.h" //Dependancy for home computer
 #include "Node.h"
 #include <ostream>
 
