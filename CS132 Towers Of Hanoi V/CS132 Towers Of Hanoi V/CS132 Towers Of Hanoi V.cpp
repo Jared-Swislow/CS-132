@@ -29,7 +29,7 @@ int main()
 		{
 			cerr << "Caught: " << e.what() << endl;
 			cerr << "Type: " << typeid(e).name() << endl;
-		}/*
+		}
 		try
 		{
 			stack0.pop();
@@ -59,7 +59,7 @@ int main()
 			cout << "stack3: " << stack3 << ", equal to stack1? " << (stack1 == stack3) << endl;
 		} // Test the stack3 destructor
 
-		cout << "stack1: " << stack1 << endl; // Has stack 1 changed?*/
+		cout << "stack1: " << stack1 << endl; // Has stack 1 changed?
 	}
 
 	Peg peg1("Peg 1", NUM_OF_DISKS);
