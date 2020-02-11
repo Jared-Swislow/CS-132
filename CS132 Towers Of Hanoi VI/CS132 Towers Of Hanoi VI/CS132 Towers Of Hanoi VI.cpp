@@ -1,5 +1,5 @@
 //Jared Swislow
-//CS 132 Program 6: Towers Of Hanoi with AAAAAAAA
+//CS 132 Program 6: Towers Of Hanoi with Templates for Stack and Node
 
 #include <iostream>
 #define NDEBUG
@@ -16,50 +16,26 @@ void hanoi(Peg& startPeg, Peg& goalPeg, Peg& tempPeg, int amountOfDisks, int& am
 
 int main()
 {
-	//Cliff's test code
 	
+	//Cliff's Test Code
 	{
-		// Read Top Element / Pop from an empty stack - catch the exceptions
-		Stack stack0;
-		try
-		{
-			stack0.getTop();
-		}
-		catch (exception &e)
-		{
-			cerr << "Caught: " << e.what() << endl;
-			cerr << "Type: " << typeid(e).name() << endl;
-		}
-		try
-		{
-			stack0.pop();
-		}
-		catch (exception &e)
-		{
-			cerr << "Caught: " << e.what() << endl;
-			cerr << "Type: " << typeid(e).name() << endl;
-		}
-
-		Stack stack1(stack0); // test initialization with an empty stack
+		Stack<int> stack1;
 		stack1.push(1); stack1.push(2); stack1.push(3); stack1.push(4);
-		cout << boolalpha << "stack1: " << stack1 << ", equal to stack1? " << (stack1 == stack1) << endl;
-		stack1 = stack1; // Test the = operator on self
-		cout << "stack1: " << stack1 << endl;
+		cout << "stack1 top: " << stack1.getTop() << endl;
+		
+		Stack<string> cliffStack;
+		cliffStack.push("This"); cliffStack.push(" is"); cliffStack.push(" a"); cliffStack.push(" test.");
+		cout << "cliffStack: " << cliffStack << endl;
+	}
 
-		{ // Test the copy constructor
-			Stack stack2(stack1); cout << "stack2: " << stack2 << ", equal to stack1? " << (stack1 == stack2) <<
-			endl;
-		} // Test the stack2 destructor
+	//Node Test Code
+	{
+		Node<int> intNode(3);
+		cout << intNode;
 
-		{ // Test the = operator
-			Stack stack3;
-			stack3.push(10); stack3.push(11);
-			cout << "stack3: " << stack3 << ", equal to stack1? " << (stack1 == stack3) << endl;
-			stack3 = stack1;
-			cout << "stack3: " << stack3 << ", equal to stack1? " << (stack1 == stack3) << endl;
-		} // Test the stack3 destructor
-
-		cout << "stack1: " << stack1 << endl; // Has stack 1 changed?
+		Node<char> charNode('A');
+		cout << charNode;
+		cout << endl << endl;
 	}
 
 	Peg peg1("Peg 1", NUM_OF_DISKS);
@@ -68,7 +44,7 @@ int main()
 
 	int amountOfMoves = 0;
 
-	cout << "Jared Swislow's Program 6: Towers Of Hanoi with AAAAAAAA" << endl << endl;
+	cout << "Jared Swislow's Program 6: Towers Of Hanoi with Templates for Stack and Node" << endl << endl;
 
 	cout << peg1 << peg2 << peg3;
 

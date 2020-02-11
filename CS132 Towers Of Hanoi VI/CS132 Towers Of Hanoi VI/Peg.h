@@ -12,7 +12,7 @@ private:
 	string name;
 
 	//Structure to hold the disks
-	Stack stack;
+	Stack<int> stack;
 
 	//Private method to load numDisks disks onto a Peg
 	void loadDisks(int numDisks);

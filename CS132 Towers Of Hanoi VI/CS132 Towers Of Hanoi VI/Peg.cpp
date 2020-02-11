@@ -17,16 +17,6 @@ void Peg::loadDisks(int numDisks) {
 	}
 }
 
-//void Peg::printPeg() const {
-//	cout << name << ": " << stack << endl;
-//}
-
-//void Peg::printPegReverse() const {
-//	cout << name << ": ";
-//	stack.displayStackInReverse();
-//	cout << endl;
-//}
-
 unsigned int Peg::getNumDisks() const {
 	return stack.getAmountOfNodes();
 }

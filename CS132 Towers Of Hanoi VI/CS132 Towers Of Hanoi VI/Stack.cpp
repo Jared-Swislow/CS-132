@@ -1,4 +1,4 @@
-#include "Stack.h"
+/*#include "Stack.h"
 #include "Node.h"
 #define NDEBUG
 #include <cassert>
@@ -69,21 +69,6 @@ int Stack::pop() {
 	return tempValue;
 }
 
-//Displaying the stack
-//void Stack::displayStack() const {
-//	Node* crawler = top;
-//	while(crawler != nullptr) {
-//		cout << crawler->getValue();
-//		crawler = crawler->getNextNodePtr();
-//	}
-//}
-//
-//void Stack::displayStackInReverse() const {
-//	if (amountOfNodes > 0) {
-//		displayStackReverseHelper(top);
-//	}
-//}
-
 void Stack::displayStackReverseHelper(Node* current, ostream& outStream) const {
 	if (current != nullptr) {
 		displayStackReverseHelper(current->getNextNodePtr(), outStream);
@@ -107,7 +92,7 @@ Stack& Stack::operator = (const Stack& fromStack) {
 }
 
 //Operator Overloading for ==
-bool Stack::operator == (const Stack& fromStack) const {
+bool Stack::operator == (const Stack& fromStack) {
 	bool returnBool = true;
 	if (this != &fromStack) { //Only do the if statement if they aren't the same memory addresses
 		if (amountOfNodes != fromStack.amountOfNodes) { //If they have the same amount of nodes, exit and return false
@@ -138,4 +123,4 @@ void Stack::destructorHelper() {
 	while (top != nullptr) {
 		pop();
 	}
-}
+}*/
