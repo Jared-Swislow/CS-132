@@ -13,7 +13,7 @@ Peg::Peg(string pegName, int numDisks) {
 void Peg::loadDisks(int numDisks) {
 	assert(numDisks >= 0);
 	for (int i = numDisks; i > 0; i--) {
-		stack.push(i);
+		stack.push(i + ('A' - 1));
 	}
 }
 
@@ -29,14 +29,14 @@ void Peg::addDisk(int diskValue) {
 	stack.push(diskValue);
 }
 
-int Peg::topDisk() const {
+char Peg::topDisk() const {
 	assert(getNumDisks() > 0);
 	return stack.getTop();
 }
 
-int Peg::removeTop() {
+char Peg::removeTop() {
 	assert(getNumDisks() > 0);
-	int temp = stack.getTop();
+	char temp = stack.getTop();
 	stack.pop();
 	return temp;
 }

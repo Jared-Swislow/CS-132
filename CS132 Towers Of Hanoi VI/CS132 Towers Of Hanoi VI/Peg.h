@@ -12,7 +12,7 @@ private:
 	string name;
 
 	//Structure to hold the disks
-	Stack<int> stack;
+	Stack<char> stack;
 
 	//Private method to load numDisks disks onto a Peg
 	void loadDisks(int numDisks);
@@ -32,11 +32,11 @@ public:
 	string getName() const;
 
 	//Method to return the value of the top disk
-	int topDisk() const;
+	char topDisk() const;
 
 	//Methods to add and remove disks from the peg
 	void addDisk(int diskValue);
-	int removeTop();
+	char removeTop();
 
 	//Operator Overloading for <<
 	friend ostream& operator <<(ostream& outStream, const Peg& peg);
