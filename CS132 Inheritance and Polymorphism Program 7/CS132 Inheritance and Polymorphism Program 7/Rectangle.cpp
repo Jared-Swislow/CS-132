@@ -25,11 +25,11 @@ void Rectangle::setWidth(int newWidth) {
 	width = newWidth;
 }
 
-int Rectangle::getArea() const {
+float Rectangle::getArea() const {
 	return width * height;
 }
 
-int Rectangle::getPerimeter() const {
+float Rectangle::getPerimeter() const {
 	return (2 * width) + (2 * height);
 }
 
@@ -41,4 +41,8 @@ ostream& operator << (ostream& outStream, const Rectangle& rectToPrint) {
 	outStream << "Perimeter: " << rectToPrint.getPerimeter() << endl;
 	outStream << endl;
 	return outStream;
+}
+
+Rectangle::~Rectangle() {
+
 }

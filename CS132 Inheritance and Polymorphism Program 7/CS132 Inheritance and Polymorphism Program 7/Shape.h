@@ -16,4 +16,13 @@ public:
 
 	//Accessor for name
 	string getName() const;
+
+	//Calculate Area and perimeter
+	virtual float getArea() const = 0;
+	virtual float getPerimeter() const = 0;
+
+	//Virtual method for cout
+	//virtual friend ostream& operator << (ostream& outStream, const Rectangle& rectToPrint) = 0;
+
+	virtual ~Shape();
 };

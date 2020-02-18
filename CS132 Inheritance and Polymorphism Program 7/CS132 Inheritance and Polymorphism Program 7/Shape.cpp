@@ -13,3 +13,7 @@ void Shape::setName(string newName) {
 string Shape::getName() const {
 	return name;
 }
+
+Shape::~Shape() {
+
+}

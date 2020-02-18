@@ -20,9 +20,12 @@ public:
 	void setWidth(int newWidth);
 
 	//Calculate Area and perimeter
-	int getArea() const;
-	int getPerimeter() const;
+	float getArea() const;
+	float getPerimeter() const;
 
 	//Overload for <<
 	friend ostream& operator << (ostream& outStream, const Rectangle& rectToPrint);
+
+	//Destructor
+	~Rectangle();
 };

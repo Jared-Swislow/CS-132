@@ -139,12 +139,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CS132 Inheritance and Polymorphism Program 7.cpp" />
+    <ClCompile Include="Cylinder.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cylinder.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
