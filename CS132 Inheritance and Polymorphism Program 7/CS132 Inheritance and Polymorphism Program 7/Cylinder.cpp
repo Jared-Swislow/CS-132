@@ -1,8 +1,6 @@
 #include "Cylinder.h"
 #include <ostream>
 
-#include <iostream>
-
 Cylinder::Cylinder(string newName, int newBaseRadius, int newHeight) : Shape(newName) {
 	baseRadius = newBaseRadius;
 	height = newHeight;
