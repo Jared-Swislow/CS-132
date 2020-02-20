@@ -9,13 +9,12 @@ Cylinder::Cylinder(string newName, int newBaseRadius, int newHeight) : Shape(new
 }
 
 float Cylinder::getArea() const { //Really volume
-	const int PI = 3.14159265359;
+	const float PI = 3.14159265359;
 	return(PI * baseRadius * baseRadius * height);
 }
 
 float Cylinder::getPerimeter() const { //Really Surface Area
-	const int PI = 3.14159265359;
-	cout << (2 * PI * baseRadius * (height + baseRadius));
+	const float PI = 3.14159265359;
 	return((2 * PI * baseRadius * baseRadius) + (PI * 2 * baseRadius * height)); //2pir^2+pidh
 }
 
