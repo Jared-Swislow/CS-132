@@ -23,7 +23,8 @@ int main() {
 		cout << "Perimeter/Surface Area: " << shapePtr->getPerimeter() << endl << endl;
 		delete shapePtr;
 	}
-	
+
+	/*
 	//Shape Test Code
 	{
 		Rectangle myRect("First rectangle", 3, 5);
@@ -46,5 +47,5 @@ int main() {
 		myTorus.setMinorRadius(2);
 		myTorus.setMajorRadius(10);
 		cout << myTorus;
-	}
+	}*/
 }
