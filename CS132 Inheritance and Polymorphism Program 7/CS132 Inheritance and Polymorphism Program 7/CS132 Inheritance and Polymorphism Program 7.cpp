@@ -5,6 +5,7 @@
 #include "Rectangle.h"
 #include "Cylinder.h"
 #include "Stack.h"
+#include "Torus.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int main() {
 
 	shapeStack.push(new Rectangle("Rectangle on stack", 3, 5));
 	shapeStack.push(new Cylinder("Cylinder on stack", 4, 10));
+	shapeStack.push(new Torus("Torus On Stack", 4, 10));
 
 	while (shapeStack.getAmountOfNodes() > 0) {
 		Shape* shapePtr = shapeStack.pop();
@@ -37,5 +39,12 @@ int main() {
 		myCylinder.setBaseRadius(8);
 		myCylinder.setHeight(1);
 		cout << myCylinder;
+
+		Torus myTorus("First Torus", 3, 5);
+		cout << myTorus;
+		myTorus.setName("New Torus");
+		myTorus.setMinorRadius(2);
+		myTorus.setMajorRadius(10);
+		cout << myTorus;
 	}
 }
