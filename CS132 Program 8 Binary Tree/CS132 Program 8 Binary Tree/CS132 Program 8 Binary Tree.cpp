@@ -17,10 +17,15 @@ using namespace std;
 
 int main()
 {
+
+    //Test code
     {
         BinaryNode<int> myNode(1234, nullptr, nullptr);
-        BinaryNode<string> myNode2("bruh", nullptr, nullptr);
-        cout << myNode;
-        cout << myNode2;
+        BinaryNode<string> myNode2("testNode", nullptr, nullptr);
+        cout << myNode << endl;
+        cout << myNode2 << endl;
+
+        BinaryTree myTree(TraversalType::INORDER);
+
     }
 }
