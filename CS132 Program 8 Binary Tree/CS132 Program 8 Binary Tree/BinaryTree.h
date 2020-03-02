@@ -6,23 +6,25 @@ using namespace std;
 
 enum class TraversalType {INORDER, PREORDER, POSTORDER, BREADTHORDER};
 
+template <typename P>
+
 class BinaryTree {
 private:
-	BinaryNode<int>* head;
+	BinaryNode<P>* head;
 	TraversalType traversalType;
 
 	//Helper to copy the tree with the head node passed in
-	BinaryNode<int>* copyHelper(BinaryNode<int>* currentNode) {
-		BinaryNode<int>* newNode = nullptr;
+	BinaryNode<P>* copyHelper(BinaryNode<P>* currentNode) {
+		BinaryNode<P>* newNode = nullptr;
 		if (currentNode != nullptr) {
-			newNode = new BinaryNode<int>(currentNode->getPayload(), copyHelper(currentNode->getLeftPtr()), copyHelper(currentNode->getRightPtr()));
+			newNode = new BinaryNode<P>(currentNode->getPayload(), copyHelper(currentNode->getLeftPtr()), copyHelper(currentNode->getRightPtr()));
 		}
 		return newNode;
 	}
 
 	//Helper to clear the tree
 	//Doesn't set head to nullptr, so may need to be changed for some future use
-	void clearTree(BinaryNode<int>* currentNode) {
+	void clearTree(BinaryNode<P>* currentNode) {
 		if (currentNode != nullptr) {
 			clearTree(currentNode->getLeftPtr());
 			clearTree(currentNode->getRightPtr());
@@ -31,21 +33,21 @@ private:
 	}
 
 	//Helpers for each traversal order
-	void preOrderHelper(const BinaryNode<int>* currentNode, ostream& outStream) {
+	void preOrderHelper(const BinaryNode<P>* currentNode, ostream& outStream) {
 		if (currentNode != nullptr) {
 			outStream << currentNode->getPayload() << " ";
 			preOrderHelper(currentNode->getLeftPtr(), outStream);
 			preOrderHelper(currentNode->getRightPtr(), outStream);
 		}
 	}
-	void inOrderHelper(const BinaryNode<int>* currentNode, ostream& outStream) {
+	void inOrderHelper(const BinaryNode<P>* currentNode, ostream& outStream) {
 		if (currentNode != nullptr) {
 			inOrderHelper(currentNode->getLeftPtr(), outStream);
 			outStream << currentNode->getPayload() << " ";
 			inOrderHelper(currentNode->getRightPtr(), outStream);
 		}
 	}
-	void postOrderHelper(const  BinaryNode<int>* currentNode, ostream& outStream) {
+	void postOrderHelper(const  BinaryNode<P>* currentNode, ostream& outStream) {
 		if (currentNode != nullptr) {
 			postOrderHelper(currentNode->getLeftPtr(), outStream);
 			postOrderHelper(currentNode->getRightPtr(), outStream);
@@ -53,13 +55,13 @@ private:
 		}
 	}
 
-	void breadthOrderHelper(BinaryNode<int>* currentNode, ostream& outStream) {
-		Queue<BinaryNode<int>*> queue;
+	void breadthOrderHelper(BinaryNode<P>* currentNode, ostream& outStream) {
+		Queue<BinaryNode<P>*> queue;
 		if (currentNode != nullptr) {
 			queue.enqueue(currentNode);
 		}
 		while (!queue.isEmpty()) {
-			BinaryNode<int>* tempHead = queue.dequeue();
+			BinaryNode<P>* tempHead = queue.dequeue();
 			outStream << tempHead->getPayload() << " ";
 			if (tempHead->getLeftPtr() != nullptr) {
 				queue.enqueue(tempHead->getLeftPtr());
@@ -85,7 +87,7 @@ public:
 	}
 
 	//Temporary Accessor for head
-	BinaryNode<int>* getHeadPtr() {
+	BinaryNode<P>* getHeadPtr() {
 		return head;
 	}
 
@@ -95,7 +97,7 @@ public:
 	}
 
 	//Temporary Mutator for head
-	void setHead(BinaryNode<int>* newHead) {
+	void setHead(BinaryNode<P>* newHead) {
 		head = newHead;
 	}
 
