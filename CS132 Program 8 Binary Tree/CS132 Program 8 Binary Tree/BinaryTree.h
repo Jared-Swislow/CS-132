@@ -131,7 +131,7 @@ public:
 	}
 
 	//Operator overload for =
-	BinaryTree operator = (const BinaryTree& fromTree) {
+	BinaryTree& operator = (const BinaryTree& fromTree) {
 		if (this != &fromTree) {
 			clearTree(head);
 			head = copyHelper(fromTree.head);
