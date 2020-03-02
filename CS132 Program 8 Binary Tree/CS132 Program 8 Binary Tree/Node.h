@@ -7,7 +7,7 @@ template<typename P>
 
 class Node {
 private:
-	Node* next;
+	Node<P>* next;
 	P payload;
 public:
 	//Constructors with value and one with a nextPtr
@@ -37,8 +37,8 @@ public:
 	}
 
 	//Operator Overloading for <<
-	friend ostream& operator << (ostream& outStream, const Node& node) {
-		outStream << node.getValue();
+	friend ostream& operator << (ostream& outStream, const Node<P>& node) {
+		outStream << node.getPayload();
 		return outStream;
 	}
 

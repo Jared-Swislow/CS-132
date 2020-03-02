@@ -183,7 +183,7 @@ public:
 		Node<P> *nodePtr = queue.front;
 		while (nodePtr != nullptr)
 		{
-			outputStream << *nodePtr << " ";
+			outputStream << *nodePtr;
 			nodePtr = nodePtr->getNext();
 		}
 		return(outputStream);
