@@ -1,7 +1,7 @@
 //Jared Swislow
 //CS 132 Program 8: Basic Binary Tree
 
-//Using Cliff's main(Modified to fit my function names, etc.):
+//Using Cliff's main(Modified to fit my function names, parameters, etc.):
 // File Name:  Week 9 Binary Tree Template Class.cpp
 // Author:  Cliff Snyder (csnyder@everett.edu)
 // Description:  Binary Tree class driver

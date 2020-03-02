@@ -33,21 +33,23 @@ private:
 	}
 
 	//Helpers for each traversal order
-	void preOrderHelper(const BinaryNode<P>* currentNode, ostream& outStream) {
+	void preOrderHelper(const BinaryNode<P>* currentNode, ostream& outStream) const {
 		if (currentNode != nullptr) {
 			outStream << currentNode->getPayload() << " ";
 			preOrderHelper(currentNode->getLeftPtr(), outStream);
 			preOrderHelper(currentNode->getRightPtr(), outStream);
 		}
 	}
-	void inOrderHelper(const BinaryNode<P>* currentNode, ostream& outStream) {
+
+	void inOrderHelper(const BinaryNode<P>* currentNode, ostream& outStream) const {
 		if (currentNode != nullptr) {
 			inOrderHelper(currentNode->getLeftPtr(), outStream);
 			outStream << currentNode->getPayload() << " ";
 			inOrderHelper(currentNode->getRightPtr(), outStream);
 		}
 	}
-	void postOrderHelper(const  BinaryNode<P>* currentNode, ostream& outStream) {
+
+	void postOrderHelper(const  BinaryNode<P>* currentNode, ostream& outStream) const {
 		if (currentNode != nullptr) {
 			postOrderHelper(currentNode->getLeftPtr(), outStream);
 			postOrderHelper(currentNode->getRightPtr(), outStream);
@@ -55,7 +57,7 @@ private:
 		}
 	}
 
-	void breadthOrderHelper(BinaryNode<P>* currentNode, ostream& outStream) {
+	void breadthOrderHelper(BinaryNode<P>* currentNode, ostream& outStream) const {
 		Queue<BinaryNode<P>*> queue;
 		if (currentNode != nullptr) {
 			queue.enqueue(currentNode);
@@ -87,12 +89,12 @@ public:
 	}
 
 	//Temporary Accessor for head
-	BinaryNode<P>* getHeadPtr() {
+	BinaryNode<P>* getHeadPtr() const {
 		return head;
 	}
 
 	//Accessor for TraversalType
-	TraversalType getTraversalType() {
+	TraversalType getTraversalType() const {
 		return traversalType;
 	}
 
