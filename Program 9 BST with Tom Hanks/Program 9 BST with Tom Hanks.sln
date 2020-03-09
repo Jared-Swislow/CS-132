@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program 9 BST with Tom Hanks", "Program 9 BST with Tom Hanks\Program 9 BST with Tom Hanks.vcxproj", "{5BB72DEA-FB57-4F66-8248-7A61538B4274}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Debug|x64.ActiveCfg = Debug|x64
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Debug|x64.Build.0 = Debug|x64
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Debug|x86.ActiveCfg = Debug|Win32
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Debug|x86.Build.0 = Debug|Win32
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Release|x64.ActiveCfg = Release|x64
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Release|x64.Build.0 = Release|x64
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Release|x86.ActiveCfg = Release|Win32
+		{5BB72DEA-FB57-4F66-8248-7A61538B4274}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30615138-10B6-470B-BBF1-793111CB0DF4}
+	EndGlobalSection
+EndGlobal

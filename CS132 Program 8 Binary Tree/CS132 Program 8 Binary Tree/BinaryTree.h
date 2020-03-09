@@ -109,7 +109,7 @@ public:
 	}
 
 	//Traversal manager(overload of <<)
-	friend ostream& operator << (ostream & outStream, BinaryTree& treeToPrint) {
+	friend ostream& operator << (ostream & outStream, const BinaryTree& treeToPrint) {
 		switch (treeToPrint.traversalType) {
 		case TraversalType::INORDER:
 			treeToPrint.inOrderHelper(treeToPrint.head, outStream);
@@ -136,6 +136,7 @@ public:
 			clearTree(head);
 			head = copyHelper(fromTree.head);
 		}
+		this->traversalType = fromTree.traversalType;
 		return *this;
 	}
 
