@@ -1,0 +1,22 @@
+Outputs from various amounts of ints in the array:
+
+Sorting int array of 10 elements.
+Sort took 0 ticks
+
+Sorting int array of 1000 elements.
+Sort took 1 ticks
+
+Sorting int array of 10000 elements.
+Sort took 44 ticks
+
+Sorting int array of 100000 elements.
+Sort took 190 ticks
+
+Sorting int array of 250000 elements.
+Sort took 421 ticks
+
+The time taken increased at a logarithmic rate 
+ to the amount of elements in the array.
+ Multiplying the amount of elements did not
+ multiply the time taken, impleying a non-linear
+ relationship.
